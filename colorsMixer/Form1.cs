@@ -16,15 +16,15 @@ namespace colorsMixer
         {
             InitializeComponent();
         }
-        public string hexR="";
-        public string hexG="";
-        public string hexB="";
+        public string hexR="0";
+        public string hexG="0";
+        public string hexB="0";
         public int ihexR=0;
         public int ihexG=0;
         public int ihexB=0;
 
-        public int ihexA;
-        public string hexA;
+        public int ihexA=255;
+        public string hexA="FF";
 
         public void setcolor()
         {
@@ -107,8 +107,17 @@ namespace colorsMixer
            label9.Text = trackBar4.Value.ToString();
             hexA = toHexa(trackBar4.Value);
             ihexA = trackBar4.Value;
-            
+            label10.Text = hexA;
+            label11.Text = ihexA.ToString();
             updatevalshexa();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            updateDecaOfColor();
+            updatevalshexa();
+            label10.Text = hexA;
+            label11.Text = ihexA.ToString();
         }
     }
 }

@@ -50,6 +50,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.trackBar4 = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
@@ -71,6 +73,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 22);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "00";
             // 
             // label1
             // 
@@ -96,6 +99,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(160, 22);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "00";
             // 
             // trackBar2
             // 
@@ -121,6 +125,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(160, 22);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "00";
             // 
             // trackBar3
             // 
@@ -153,6 +158,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(366, 22);
             this.textBox5.TabIndex = 11;
+            this.textBox5.Text = "#000000";
             // 
             // panel1
             // 
@@ -185,6 +191,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(160, 22);
             this.textBox6.TabIndex = 17;
+            this.textBox6.Text = "00";
             // 
             // textBox7
             // 
@@ -192,6 +199,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(160, 22);
             this.textBox7.TabIndex = 16;
+            this.textBox7.Text = "00";
             // 
             // textBox8
             // 
@@ -199,6 +207,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(160, 22);
             this.textBox8.TabIndex = 15;
+            this.textBox8.Text = "00";
             // 
             // label7
             // 
@@ -225,6 +234,7 @@
             this.trackBar4.Name = "trackBar4";
             this.trackBar4.Size = new System.Drawing.Size(515, 56);
             this.trackBar4.TabIndex = 20;
+            this.trackBar4.Value = 255;
             this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
             // 
             // label9
@@ -236,11 +246,31 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "A";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(590, 273);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 16);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "deca";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(590, 299);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(28, 16);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "hex";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 704);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.trackBar4);
             this.Controls.Add(this.label8);
@@ -265,6 +295,7 @@
             this.Controls.Add(this.trackBar1);
             this.Name = "Form1";
             this.Text = "ColorMixerARGB";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
@@ -298,6 +329,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TrackBar trackBar4;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 
