@@ -16,16 +16,19 @@ namespace colorsMixer
         {
             InitializeComponent();
         }
-        public string hexR;
-        public string hexG;
-        public string hexB;
-        public int ihexR;
-        public int ihexG;
-        public int ihexB;
+        public string hexR="";
+        public string hexG="";
+        public string hexB="";
+        public int ihexR=0;
+        public int ihexG=0;
+        public int ihexB=0;
+
+        public int ihexA;
+        public string hexA;
 
         public void setcolor()
         {
-            Color c = Color.FromArgb(120, ihexR, ihexG, ihexB);
+            Color c = Color.FromArgb(ihexA, ihexR, ihexG, ihexB);
 
             panel1.BackColor = c;
                 
@@ -33,13 +36,24 @@ namespace colorsMixer
         public void updateDecaOfColor()
         {
             string s = textBox5.Text;
-            Color color = Color.FromArgb(ihexR, ihexG, ihexB);
+            Color color = Color.FromArgb(ihexA,ihexR, ihexG, ihexB);
             this.textBox4.Text = color.ToString();
 
         }
         public void updatevalshexa()
         {
-            textBox5.Text = "#"+hexR+hexG+hexB;
+            string shexR;
+            if (ihexR < 10) { shexR = "0" + hexR.ToString(); }
+            else {  shexR = hexR.ToString(); }
+            string shexG;
+            if (ihexG < 10) { shexG = "0" + hexG.ToString(); }
+            else { shexG = hexG.ToString(); }
+            string shexB;
+            if (ihexB < 10) { shexB = "0" + hexB.ToString(); }
+            else { shexB = hexB.ToString(); }
+
+
+            textBox5.Text = "#"+shexR+shexG+shexB;
             setcolor();
             updateDecaOfColor();
         }
@@ -85,6 +99,15 @@ namespace colorsMixer
             hexB = toHexa(trackBar3.Value);
             ihexB = trackBar3.Value;
             setHextoTextBox(ref this.textBox8, hexB);
+            updatevalshexa();
+        }
+
+        private void trackBar4_Scroll(object sender, EventArgs e)
+        {
+           label9.Text = trackBar4.Value.ToString();
+            hexA = toHexa(trackBar4.Value);
+            ihexA = trackBar4.Value;
+            
             updatevalshexa();
         }
     }

@@ -48,9 +48,12 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.trackBar4 = new System.Windows.Forms.TrackBar();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             this.SuspendLayout();
             // 
             // trackBar1
@@ -215,11 +218,31 @@
             this.label8.TabIndex = 19;
             this.label8.Text = "deca";
             // 
+            // trackBar4
+            // 
+            this.trackBar4.Location = new System.Drawing.Point(69, 273);
+            this.trackBar4.Maximum = 255;
+            this.trackBar4.Name = "trackBar4";
+            this.trackBar4.Size = new System.Drawing.Size(515, 56);
+            this.trackBar4.TabIndex = 20;
+            this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(25, 284);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(16, 16);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "A";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 704);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.trackBar4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
@@ -245,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,6 +296,8 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TrackBar trackBar4;
+        private System.Windows.Forms.Label label9;
     }
 }
 
